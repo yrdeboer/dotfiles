@@ -34,3 +34,5 @@
 
 (setq scroll-step            1
       scroll-conservatively  10000)
+
+(setq-default indent-tabs-mode nil)
