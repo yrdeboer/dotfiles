@@ -92,7 +92,9 @@ alias dir='ls -latr'
 # other programs (like git, man, etc.)
 export PAGER=cat
 
-
-
 # Mode switch kan als meta gebruikt worden
 xmodmap -e "keysym Mode_switch = Meta_R" &> /dev/null
+
+# Mouse rates
+gsettings set org.gnome.settings-daemon.peripherals.keyboard repeat-interval 15
+gsettings set org.gnome.settings-daemon.peripherals.keyboard delay 150
