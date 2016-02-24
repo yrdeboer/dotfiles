@@ -95,6 +95,11 @@ export PAGER=cat
 # Mode switch kan als meta gebruikt worden
 xmodmap -e "keysym Mode_switch = Meta_R" &> /dev/null
 
-# Mouse rates
+# Some Gnome settings
+#
+# -- Mouse
 gsettings set org.gnome.settings-daemon.peripherals.keyboard repeat-interval 15
-gsettings set org.gnome.settings-daemon.peripherals.keyboard delay 150
+gsettings set org.gnome.settings-daemon.peripherals.keyboard delay 250
+# 
+# --
+gsettings set org.gnome.desktop.lockdown disable-lock-screen true
