@@ -30,8 +30,6 @@ shopt -s checkwinsize
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
-# I want git aware prompt
-source  ~/github/git/contrib/completion/git-prompt.sh
 # PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ ' # Includes full path
 PS1='\n[\u@\h \w$(__git_ps1 " (%s)")]\n\$ '  # Inclused only top dir
 
