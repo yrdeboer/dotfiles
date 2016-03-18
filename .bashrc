@@ -131,3 +131,4 @@ gsettings set  org.gnome.desktop.peripherals.keyboard repeat-interval 15
 gsettings set org.gnome.desktop.lockdown disable-lock-screen true
 
 alias dir='ls -latr'
+export PAGER=cat
