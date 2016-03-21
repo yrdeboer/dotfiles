@@ -56,11 +56,8 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-fi
+# Git branch after prompt with nice makeup, thanks to kasteelj :)
+export PS1='\[\033[0;32m\]\[\033[0m\033[0;32m\]\u\[\033[0;36m\] @ \[\033[0;36m\]\h \w\[\033[0;32m\]$(__git_ps1)\n\[\033[0;32m\]└─\[\033[0m\033[0;32m\] \$\[\033[0m\033[0;32m\] ▶\[\033[0m\] '
 unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
@@ -131,3 +128,4 @@ gsettings set  org.gnome.desktop.peripherals.keyboard repeat-interval 15
 gsettings set org.gnome.desktop.lockdown disable-lock-screen true
 
 alias dir='ls -latr'
+export PAGER=cat
