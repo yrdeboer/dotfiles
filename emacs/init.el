@@ -45,7 +45,7 @@
 ;; ====================================
 
 (setq inhibit-startup-message t)  ;; Hide the startup message
-(load-theme 'material t)          ;; Load material theme
+(load-theme 'solarized-light t)   ;; Load theme
 (global-linum-mode t)             ;; Enable line numbers globally
 
 ;; ====================================
@@ -88,3 +88,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+
+(setq scroll-step            1
+      scroll-conservatively  10000)
+
+(setq-default indent-tabs-mode nil)
